@@ -1,0 +1,69 @@
+<html lang="ru">
+	<head>
+		<title>Vex | Your profile</title>
+		<link rel="icon" href="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<meta name="description" value="Улучшите свой сервер при помощи чудесного бота Vex! Этот бот поможет вам модерировать сервер, добавить немного игр и экономику. Попробуйте сами!">
+		<meta name="og:image" value="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<style>
+			@font-face {
+				font-family: face;
+				src: url("https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/MultiroundPro.otf?v=1673104703907");
+			}
+			* {
+				font-family: face;
+				background-color: #101010;
+				color: white;
+				text-decoration: none;
+			}
+			.header {
+				text-align: center;
+				background-color: #202020;
+			}
+			.menu {
+				float: left;
+				width: 24%;
+				height: 85vh;
+				margin-left: 1%;
+				margin: 0 20px 0 0;
+			}
+			li {
+				border: solid 1px blue;
+				border-radius: 5px;
+				background-color: blue;
+				margin: 5px 0 5px 0;
+				padding: 5px;
+			}
+			.blue {
+				background-color: blue;
+			}
+			.items {
+				background-color: #242424;
+			}
+			.center {
+				text-align: center;
+			}
+			.btn {
+				border: solid 5px grey;
+				border-radius: 10px;
+				background-color: grey;
+			}
+			.circ {
+				border-radius: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1><img src="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945", width="70">Vex</h1>
+		</div>
+		<br>
+		<div class="menu">
+			<h2>Я</h2>
+			<ul>
+				<li>Мой профиль</li>
+				<li><a class="blue" href="/dashboard">Мои сервера</a></li>
+			</ul>
+		</div>
+		<h2>Мой профиль</h2><br><h3><img class="circ" src="{{user.avatar.url}}" width="60">{{user.name}}</h3>#{{user.discriminator}}<br><br>ID: {{user.id}}<br>Кол-во очков: {{scope_count}}</div>
+	</body>
+</html>

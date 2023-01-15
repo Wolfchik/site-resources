@@ -1,0 +1,63 @@
+<html>
+	<head>
+		<title>Vex | Dashboard</title>
+		<link rel="icon" href="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<meta name="description" value="Улучшите свой сервер при помощи чудесного бота Vex! Этот бот поможет вам модерировать сервер, добавить немного игр и экономику. Попробуйте сами!">
+		<meta name="og:image" value="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<style>
+			@font-face {
+				font-family: face;
+				src: url("https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/MultiroundPro.otf?v=1673104703907");
+			}
+			* {
+				font-family: face;
+				background-color: #101010;
+				color: white;
+				text-decoration: none;
+			}
+			.header {
+				text-align: center;
+				background-color: #202020;
+			}
+			.container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.item {
+				border: solid 5px #242424;
+				margin: 20px;
+				border-radius: 15px;
+				background-color: #242424;
+				height: 100%;
+				width: 40%;
+			}
+			.items {
+				background-color: #242424;
+			}
+			.center {
+				text-align: center;
+			}
+			.btn {
+				border: solid 5px grey;
+				border-radius: 10px;
+				background-color: grey;
+			}
+			.circ {
+				border-radius: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1><img src="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945", width="70">Vex</h1>
+		</div>
+		<h2 align="center">Ваши сервера</h2>
+		<h3 align="center">Внимание! Видны только те сервера, на которых вы являетесь создателем, а также на них есть Vex</h3>
+		<div class="container">
+			{% for guild in guilds %}
+			<div class="item"><h2 class="items"><a class="items" href="/dashboard/{{guild.id}}">{{guild.name}}</a></h2>Кол-во участников: {{guild.member_count}}</div>
+			{% endfor %}
+		</div>
+	</body>
+</html>

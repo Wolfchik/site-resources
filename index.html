@@ -1,0 +1,76 @@
+<html lang="ru">
+	<head>
+		<title>Vex | Home</title>
+		<link rel="icon" href="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<meta name="description" value="Улучшите свой сервер при помощи чудесного бота Vex! Этот бот поможет вам модерировать сервер, добавить немного игр и экономику. Попробуйте сами!">
+		<meta name="og:image" value="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<style>
+			@font-face {
+				font-family: face;
+				src: url("https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/MultiroundPro.otf?v=1673104703907");
+			}
+			* {
+				font-family: face;
+				background-color: #101010;
+				color: white;
+				text-decoration: none;
+			}
+			.header {
+				background-color: #202020;
+			}
+			.righ {
+				text-align: right;
+			}
+			.lef {
+				text-align: left;
+			}
+
+			.container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.item {
+				margin: 60px;
+			}
+			.items {
+				background-color: #242424;
+			}
+			.center {
+				text-align: center;
+			}
+			.btn {
+				border: solid 5px grey;
+				border-radius: 10px;
+				background-color: grey;
+				margin: 10px;
+			}
+			.circ {
+				border-radius: 100%;
+			}
+			a {
+				text-align: center;
+				display:block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1><img src="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945", width="70">Vex</h1>
+			{% if user %}
+			<h2 class="righ"><img class="circ" src="{{user.avatar.url}}" width="50"><span class="righ">{{user}}</a></h2>
+			{% else %}
+			<h3 class="righ">Вы не вошли. <a href="/login" class="righ">Войти</a></h3>
+			{% endif %}
+		</div>
+		<br>
+		<h2 align="center">Улучшите свой чудесный сервер</h2>
+		<h3 align="center">используя чудесное приложение как {{bot_name}}!</h3>
+		<div class="container">
+			<div class="item"><h3>С нами уже</h3><b>{{servers}} серверов!</b></div>
+			<div class="item"><h3>И ботом воспользовались</h3><b>{{users}} пользователей!</b></div>
+		</div>
+		<a href="https://discord.com/api/oauth2/authorize?client_id=1047125592220373075&permissions=1375399570678&scope=bot%20applications.commands" class="center btn">Добавить себе на сервер</a>
+		<a href="https://discord.gg/NgKCsFbGty" class="center btn">Сервер поддержки</a>
+	</body>
+</html>

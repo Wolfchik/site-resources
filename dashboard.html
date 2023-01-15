@@ -1,0 +1,111 @@
+<html>
+	<head>
+		<title>VEX | {{guild.name}}</title>
+		<link rel="icon" href="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<meta name="description" value="Улучшите свой сервер при помощи чудесного бота Vex! Этот бот поможет вам модерировать сервер, добавить немного игр и экономику. Попробуйте сами!">
+		<meta name="og:image" value="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945">
+		<style>
+			@font-face {
+				font-family: face;
+				src: url("https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/MultiroundPro.otf?v=1673104703907");
+			}
+			* {
+				font-family: face;
+				background-color: #101010;
+				color: white;
+				text-decoration: none;
+			}
+			.header {
+				text-align: center;
+				background-color: #202020;
+			}
+			.menu {
+				float: left;
+				width: 24%;
+				height: 85vh;
+				margin-left: 1%;
+				margin: 0 20px 0 0;
+			}
+			li {
+				border: solid 1px blue;
+				border-radius: 5px;
+				background-color: blue;
+				margin: 5px 0 5px 0;
+				padding: 5px;
+			}
+			.blue {
+				background-color: blue;
+			}
+			.container {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.item {
+				border: solid 5px #242424;
+				margin: 20px;
+				border-radius: 15px;
+				background-color: #242424;
+				height: 100%;
+				width: 40%;
+			}
+			.items {
+				background-color: #242424;
+			}
+			.center {
+				text-align: center;
+			}
+			.btn {
+				border: solid 5px grey;
+				border-radius: 10px;
+				background-color: grey;
+			}
+			.btn_green {
+				border: solid 5px lime;
+				border-radius: 10px;
+				background-color: lime;
+			}
+			.circ {
+				border-radius: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1><img src="https://cdn.glitch.global/2c2f5281-aa40-4c4e-9fe8-08c1472642c0/92bdfcdc09eddf3460baaad69251513a-transformed.png?v=1673105097945", width="70">Vex</h1>
+		</div>
+		<div class="menu">
+			<h2>Настройки</h2>
+			<ul>
+				<li>Основное</li>
+				<li><a class="blue" href="/dashboard/welcome/{{guild.id}}">Приветствие</a></li>
+				<li><a class="blue" href="/dashboard/music/{{guild.id}}">Музыка</a></li>
+			</ul>
+		</div>
+		<h2>Основное.</h2>
+		<h3>Настройки бота на сервере</h3>
+		<form action="/dashboard/{{guild.id}}" method="post">
+			<h3>Язык</h3>
+			<select name="lang">
+				<option value="en">English</option>
+				<option value="ru">Русский</option>
+				<option value="uk">Украiньска</option>
+				<option value="ka">ქართული</option>
+				<option value="it">Italiano</option>
+				<option value="ja">日本語</option>
+			</select>
+			<br>
+			<br>
+			<input type="submit" class="btn_green" value="Сохранить" />
+		</form>
+		<h3>Инфо о сервере</h3>
+		<h3><img class="circ" src="{{guild.icon.url}}" width="70">{{guild.name}}</h3>
+		{{guild.id}}
+		<br>
+		Кол-во участников: {{guild.member_count}}
+		<br>
+		Кол-во текстовых каналов: {{text_count}}
+		<br>
+		Кол-во голосовых каналов: {{voice_count}}
+	</body>
+</html>
